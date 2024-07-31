@@ -9,6 +9,27 @@ import { BsFillDpadFill } from "react-icons/bs";
 import { BsX } from "react-icons/bs";
 import { TiTick } from "react-icons/ti";
 
+const typeColors = {
+  normal: '#9FA19F',
+  fire: '#E62829',
+  water: '#2980EF',
+  grass: '#3FA129',
+  electric: '#FAC000',
+  ice: '#3DCEF3',
+  fighting: '#FF8000',
+  poison: '#9141CB',
+  ground: '#915121',
+  flying: '#81B9EF',
+  psychic: '#EF4179',
+  bug: '#91A119',
+  rock: '#AFA981',
+  ghost: '#704170',
+  dragon: '#5060E1',
+  dark: '#624D4E',
+  steel: '#60A1B8',
+  fairy: '#EF70EF',
+};
+
 const Homepage = () => {
   // set up the context
   const {setSelectedPokemon} = useContext(PokeContext)
@@ -22,7 +43,7 @@ const Homepage = () => {
   const [filteredPokemon, setFilteredPokemon] = useState([]);
   // set up pokemon state for returned pokemon
   const [pokedex, setPokedex] = useState([])
-  // initialise Navigate
+  // initialize Navigate
   const navigate = useNavigate()
 
   // Fetch Pokemon Function
@@ -99,19 +120,24 @@ const Homepage = () => {
                     <div
                     key={index}
                     className='pokemon-card'
+                    style={{borderColor: typeColors[item.types[0].toLowerCase()]}}
                     onClick={() => {
                         item.onSelect()
                         navigate('/pokemon/')
                     }}
                     >
                         <div className="pokemon-info">
-                            <div className="red-inner">
+                            <div className="inner"
+                              style={{borderLeftColor: typeColors[item.types[0].toLowerCase()], borderRightColor: typeColors[item.types[0].toLowerCase()]}}
+                            >
                             <p>{item.name.toUpperCase()}</p>
                             </div>
                         </div>
                         <img src={item.imageURL} alt={item.name}/>
                         <div className="pokemon-info">
-                            <div className="red-inner">
+                            <div className="inner"
+                              style={{borderLeftColor: typeColors[item.types[0].toLowerCase()], borderRightColor: typeColors[item.types[0].toLowerCase()]}}
+                            >
                             <p>{item.types.join(", ").toUpperCase()}</p>
                             </div>
                         </div>

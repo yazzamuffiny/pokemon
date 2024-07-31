@@ -70,7 +70,7 @@ body {
   padding: 10px;
   background-image: linear-gradient(#8c8c8c 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #8c8c8c calc(100% - 1.5px)), linear-gradient(90deg, #8c8c8c 1.5px, transparent 1.5px, transparent calc(100% - 1.5px), #8c8c8c calc(100% - 1.5px));
   background-size: 9.090909090909092% 12.5%;
-  border: 1.5px solid #8c8c8c;
+  border: 5px solid #000000;
   transition: all 0.3s ease;
 }
 
@@ -88,7 +88,7 @@ body {
   background-color: white;
 }
 
-.red-inner {
+.inner {
   padding: 10px;
   border-left: 10px solid red;
   border-right: 10px solid red;
