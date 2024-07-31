@@ -4,7 +4,8 @@ import { FaCopyright } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className='footer'>
-      <FaCopyright/> Copyright 2024
+      <FaCopyright/>
+      <p>Copyright 2024</p>
     </div>
   )
 }

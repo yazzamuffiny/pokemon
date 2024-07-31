@@ -34,6 +34,7 @@ body {
 .footer {
   background-color: rgb(250, 60, 60);
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 10px;
@@ -145,6 +146,7 @@ body {
 .buttons {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   margin-top: 10px;
   width: 10%;
 }
@@ -165,7 +167,7 @@ body {
   border-radius: 50%;
   border: 3px solid green;
   width: 80px;
-  height: 80px;
+  height: auto;
 }
 
 @media screen and (max-width: 900px) {
@@ -182,13 +184,11 @@ body {
   }
 
   .x-icon {
-    height: 40px;
-    width: 40px;
+    width: 50px;
   }
 
   .tick-icon {
-    height: 60px;
-    width: 60px;
+    width: 70px;
   }
  
 }
@@ -204,6 +204,10 @@ body {
 
   #search {
     width: 200px;
+  }
+
+  .dpad-icon {
+    margin-top: 20px;
   }
 
   .panel-screen {
