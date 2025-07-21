@@ -158,7 +158,7 @@ const Homepage = () => {
             <BsFillDpadFill className='dpad-icon' />
           </div>
           <div className="panel-screen">
-            text of some kind?
+            
           </div>
           <div className="buttons">
             <BsX className='x-icon' />
